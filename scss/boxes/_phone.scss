@@ -1,0 +1,99 @@
+.phone-box {
+	background-color: $bg;
+	padding: 30px 0;
+}
+
+.phone {
+	@include flexBox(flex, space-between, center, nowrap);
+}
+.phone-img-box {
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.phone-mini-text {
+	@include textStyle(14px, 400, 18px, $info);
+	font-family: "Montserrat";
+	padding: 7px 5px;
+	background-color: #172656;
+	display: inline-block;
+	margin: 10px 0;
+}
+.phone-big-text {
+	@include textStyle(48px, 700, 58px, #fff);
+	max-width: 680px;
+	font-family: "Montserrat";
+	padding: 10px 0;
+}
+.statistics-box {
+	@include flexBox(flex, space-between, center, nowrap);
+	padding-top: 40px;
+}
+
+.number {
+	@include textStyle(38px, 700, 58px, $yellow);
+	font-family: "Montserrat";
+}
+.num-info {
+	@include textStyle(14px, 400, 18px, #868695);
+	max-width: 220px;
+	font-family: "Montserrat";
+}
+
+.vert-line {
+	width: 1px;
+	height: 76px;
+	background-color: #868695;
+	margin: 0 5px;
+}
+.dowloaders {
+	@include textStyle(38px, 700, 58px, #fb5607);
+	font-family: "Montserrat";
+}
+.down-info {
+	@include textStyle(14px, 400, 18px, #868695);
+	max-width: 180px;
+	font-family: "Montserrat";
+}
+
+@media (max-width: 787px) {
+	.phone-big-text {
+		@include textStyle(40px, 700, 50px, #fff);
+		padding: 0px 0;
+	}
+}
+
+@media (max-width: 659px) {
+	.phone {
+		flex-direction: column;
+	}
+
+	.phone-content-box {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.phone-big-text {
+		@include textStyle(34px, 700, 40px, #fff);
+	}
+}
+
+
+@media (max-width:500px) {
+	.phone-big-text {
+		@include textStyle(30px, 700, 35px, #fff);
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 330px) {
+	.phone-big-text {
+		@include textStyle(28px, 600, 35px, #fff);
+	}
+
+	.statistics-box {
+		padding: 0;
+	}
+}

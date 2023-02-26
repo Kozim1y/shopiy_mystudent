@@ -1,0 +1,118 @@
+header {
+	background-color: $bg;
+}
+
+.header-in {
+	@include flexBox(flex, space-between, center, nowrap);
+	padding: 20px 0;
+}
+
+.nav-list {
+	@include flexBox(flex, center, center, nowrap);
+	margin-left: 80px;
+}
+.nav-list-item {
+	margin: 0 25px;
+	transition: all 0.3s ease;
+
+	&:hover {
+		scale: 1.1;
+	}
+	&:active {
+		scale: 1;
+	}
+}
+.list-link {
+	@include textStyle(16px, 400, 24px, #fff);
+	font-family: "Montserrat";
+	transition: all 0.2s ease;
+
+	&:hover {
+		scale: 1.1;
+		color: $yellow;
+	}
+	&:active {
+		scale: 1;
+	}
+}
+.btn-br-box {
+	@include flexBox(flex, space-between, center, nowrap);
+}
+
+.sign-in-btn {
+	@include allBtn(transparent, 10px, 1px solid $yellow, 11px 25px);
+	@include textStyle(16px, 400, 18px, $yellow);
+	font-family: "Montserrat";
+	transition: all 0.1s ease;
+	cursor: pointer;
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+}
+.try-free-btn {
+	@include allBtn($yellow, 10px, 1px solid $yellow, 11px 25px);
+	@include textStyle(16px, 600, 18px, $bg);
+	font-family: "Montserrat";
+	margin-left: 30px;
+	transition: all 0.2s ease;
+	cursor: pointer;
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+}
+.burger {
+	display: none;
+
+	span {
+		display: block;
+		width: 28px;
+		height: 4px;
+		border-radius: 4px;
+		background-color: $yellow;
+	}
+
+	span:nth-child(2) {
+		margin: 4px 0;
+	}
+}
+
+@media (max-width: 949px) {
+	.nav-list {
+		margin: 0;
+	}
+}
+
+@media (max-width: 869px) {
+	.nav-list-item {
+		margin: 0 15px;
+	}
+
+	.try-free-btn {
+		margin-left: 10px;
+	}
+}
+
+@media (max-width: 769px) {
+	.nav-list {
+		display: none;
+	}
+
+	.burger {
+		display: block;
+		margin-left: 10px;
+	}
+}
+
+@media (max-width: 458px) {
+	.btn-box {
+		display: none;
+	}
+}

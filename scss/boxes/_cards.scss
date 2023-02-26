@@ -1,0 +1,175 @@
+.cards-box {
+	background-color: $bg;
+	padding: 25px 0;
+}
+
+.cards {
+	@include flexBox(flex, space-between, center, nowrap);
+}
+
+.card-content-mini {
+	@include textStyle(14px, 400, 18px, $info);
+	font-family: "Montserrat";
+	padding: 7px 5px;
+	background-color: #172656;
+	display: inline-block;
+	margin: 10px 0;
+}
+.card-content-hero {
+	@include textStyle(48px, 700, 58px, #fff);
+	max-width: 680px;
+	font-family: "Montserrat";
+	padding: 10px 0;
+	max-width: 550px;
+}
+.card-content-info {
+	@include textStyle(16px, 400, 22px, #868695);
+	font-family: "Montserrat";
+	max-width: 450px;
+	padding: 20px 0;
+}
+
+.card-hero {
+	@include flexBox(flex, space-between, center, nowrap);
+}
+
+.card {
+	width: 267px;
+	height: 267.5px;
+	border-radius: 10px;
+	transition: all 0.4s ease;
+	padding: 28px 22px;
+
+	&:hover {
+		background-color: #1a1a3d;
+	}
+}
+
+// .card:hover .card-img-box{
+//   background-color: #3E3125;
+//   transition: all 0.4s ease;
+//   color: #FFBE0B;
+// }
+
+.card:hover:nth-child(1) .card-img-box {
+	background-color: #3e3125;
+	transition: all 0.4s ease;
+	color: #ffbe0b;
+}
+
+.card:hover:nth-child(2) .card-img-box {
+	background-color: #172656;
+	transition: all 0.4s ease;
+	color: #3a86ff;
+}
+
+.card-box-second .card:hover:nth-child(1) .card-img-box {
+	background-color: #3d1c25;
+	transition: all 0.4s ease;
+	color: #fb5607;
+}
+
+.card-box-second .card:nth-child(2):hover .card-img-box {
+	background-color: #3e0b39;
+	transition: all 0.4s ease;
+	color: #ff006e;
+}
+
+.card-img-box {
+	color: #fff;
+	width: 73.26px;
+	height: 66.28px;
+	border-radius: 10px;
+
+	@include flexBox(flex, center, center, nowrap);
+}
+.card-name {
+	@include textStyle(20px, 700, 25px, #fff);
+	font-family: "Montserrat";
+	padding: 30px 0;
+}
+.card-info {
+	@include textStyle(14px, 400, 25px, #868695);
+	font-family: "Montserrat";
+}
+
+@media (max-width: 929px) {
+	.card-content-hero {
+		@include textStyle(40px, 700, 50px, #fff);
+	}
+}
+
+@media (max-width: 872px) {
+	.cards {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.card-content-info {
+		margin: 0 auto;
+	}
+	.card-box-first {
+		@include flexBox(flex, space-between, center, wrap);
+	}
+
+	.card-box-second {
+		@include flexBox(flex, space-between, center, wrap);
+	}
+	.card {
+		background-color: #1a1a3d;
+		// margin: 10px 0;
+		scale: 0.9;
+		margin: 0 auto;
+	}
+
+	.card:nth-child(1) .card-img-box {
+		background-color: #3e3125;
+		transition: all 0.4s ease;
+		color: #ffbe0b;
+	}
+
+	.card:nth-child(2) .card-img-box {
+		background-color: #172656;
+		transition: all 0.4s ease;
+		color: #3a86ff;
+	}
+
+	.card-box-second .card:nth-child(1) .card-img-box {
+		background-color: #3d1c25;
+		transition: all 0.4s ease;
+		color: #fb5607;
+	}
+
+	.card-box-second .card:nth-child(2) .card-img-box {
+		background-color: #3e0b39;
+		transition: all 0.4s ease;
+		color: #ff006e;
+	}
+}
+
+@media (max-width:500px) {
+	.card-content-hero {
+		@include textStyle(36px, 700, 35px, #fff);
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 337px) {
+	.card-content-hero {
+		@include textStyle(32px, 700, 45px, #fff);
+	}
+
+
+	.cards {
+		width: 100%;
+	}
+
+	.card-content-info {
+		padding: 10px 0;
+	}
+
+	.card-content-hero {
+		@include textStyle(28px, 600, 28px, #fff);
+		margin-top: 10px;
+}
+}

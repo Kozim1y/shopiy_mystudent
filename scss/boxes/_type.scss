@@ -1,0 +1,96 @@
+.type-box {
+	background-color: $bg;
+	padding: 60px 0;
+}
+
+.type {
+	text-align: center;
+}
+.type-hero {
+	@include textStyle(48px, 700, 58px, #fff);
+	font-family: "Montserrat";
+	padding: 10px 0;
+}
+.type-info {
+	@include textStyle(16px, 400, 22px, #868695);
+	font-family: "Montserrat";
+	padding: 10px 0;
+}
+.type-send-box {
+	border: 1px solid #626276;
+	width: 485.65px;
+	border-radius: 18px;
+	@include flexBox(flex, space-between, center, nowrap);
+	padding: 6px 8px;
+	margin: 30px auto;
+}
+.type-inp {
+	border: none;
+	outline: none;
+	padding: 0;
+	width: 50%;
+	background-color: $bg;
+
+	@include textStyle(16px, 600, 18px, #fff);
+	font-family: "Montserrat";
+}
+.type-send {
+	@include allBtn($yellow, 10px, 1px solid $yellow, 14px 14px);
+	@include textStyle(16px, 600, 18px, $bg);
+	font-family: "Montserrat";
+	transition: all 0.2s ease;
+	cursor: pointer;
+	&:hover {
+		scale: 1.1;
+	}
+
+	&:active {
+		scale: 1;
+	}
+}
+
+@media (max-width: 533px) {
+	.type-send-box {
+		width: 100%;
+	}
+}
+
+@media (max-width:500px) {
+	.type-hero{
+			@include textStyle(40px, 700, 45px, #fff);
+			// margin-top: 10px;
+		}
+	}
+	
+
+@media (max-width: 400px) {
+	.type-send-box {
+		flex-direction: column;
+	}
+
+	.type-box{
+		padding: 20px;
+	}
+
+	.type-inp {
+		width: 100%;
+	}
+
+	.type-send {
+		margin-top: 10px;
+	}
+
+	
+
+	
+}
+
+@media (max-width: 350px) {
+	.type-hero{
+		@include textStyle(28px, 700, 32px, #fff);
+		// margin-top: 10px;
+	}
+}
+
+
+

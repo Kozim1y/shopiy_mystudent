@@ -1,0 +1,20 @@
+@mixin textStyle($size, $weight, $line, $color) {
+	font-size: $size;
+	font-weight: $weight;
+	line-height: $line;
+	color: $color;
+}
+
+@mixin flexBox($display, $justify, $align, $wrap) {
+	display: $display;
+	justify-content: $justify;
+	align-items: $align;
+	flex-wrap: $wrap;
+}
+
+@mixin allBtn($bgColor, $bRadius, $border, $padding) {
+	background-color: $bgColor;
+	border-radius: $bRadius;
+	border: $border;
+	padding: $padding;
+}
